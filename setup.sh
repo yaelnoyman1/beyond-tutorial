@@ -1,4 +1,4 @@
-#!/bin/base -ex
+#!/bin/bash -ex
 # The -e option would make our script exit with an error if any command
 # fails while the -x option makes verbosely it output what it does
 

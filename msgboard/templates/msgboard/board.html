@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Beyond message board</title>
+        <style type="text/css">
+            .author, .eom { color: grey }
+        </style>
+    </head>
+
+    <body>
+        <h1>Beyond messaage board</h1>
+
+        <div class = "newform">
+            <p class = "newmsg"> New message:</p>
+            <form method = "POST">
+               { % csrf_toekn % }
+               {{ form.as_p }}
+               <input type = "submit" value = "Post">
+            </form>
+        </div>
+
+        {% for message in message %}
+        <div class = "messaage">
+        <p class = "author">
+            Posted by {{messaage.author}} at {{messaage.date}}
+        </p>
+
+        <p>
+            {{ message.text}}
+        </p>
+        
+        </div>
+        {% endfor %}
+
+        <p class ="EOM"> 
+            (End of messages)
+        </p>
+    </body>
+</html>

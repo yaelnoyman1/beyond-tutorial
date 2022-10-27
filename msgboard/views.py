@@ -16,7 +16,3 @@ def board(request):
         'messages': messages,
         'form': form,
     })
-       
-     
-
-# Create your views here.

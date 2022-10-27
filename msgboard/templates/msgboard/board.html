@@ -9,25 +9,25 @@
     </head>
 
     <body>
-        <h1>Beyond messaage board</h1>
+        <h1>Beyond message board</h1>
 
-        <div class = "newform">
-            <p class = "newmsg"> New message:</p>
-            <form method = "POST">
-               { % csrf_toekn % }
+        <div class = "newfrm">
+            <p class = "newmsg">New message:</p>
+            <form method="POST">
+                {% csrf_token %}
                {{ form.as_p }}
-               <input type = "submit" value = "Post">
+               <input type="submit" value = "Post">
             </form>
         </div>
 
-        {% for message in message %}
-        <div class = "messaage">
+        {% for message in messages %}
+        <div class = "message">
         <p class = "author">
-            Posted by {{messaage.author}} at {{messaage.date}}
+            Posted by {{message.author}} at {{message.date}}
         </p>
 
         <p>
-            {{ message.text}}
+            {{ message.text }}
         </p>
         
         </div>

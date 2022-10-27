@@ -13,8 +13,6 @@ pipenv sync --dev
 # Run database migrations
 pipenv run python manage.py migrate
 
-#run our app. Nohup and "&" are used to let the setup script finish
+# run our app. Nohup and "&" are used to let the setup script finish
 # while our app stays up. The app logs will be collected in nohup.out
 nohup pipenv run python manage.py runserver 0.0.0.0:8000 &
-
-    

@@ -16,7 +16,7 @@ class Migration(migrations.Migration):
             name='Message',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('authot', models.CharField(max_length=200)),
+                ('author', models.CharField(max_length=200)),
                 ('text', models.TextField()),
                 ('date', models.DateTimeField(default=django.utils.timezone.now)),
             ],
